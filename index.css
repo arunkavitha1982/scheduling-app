@@ -48,11 +48,11 @@ body {
 i {
     color: #52525b;
 }
-a{
-    text-decoration: none;
-    color: #52525b;
 
+span{
+    color: #7706CD; font-weight: bold;
 }
+
 @media (max-width:450px) {
     .login-img-sty {
         width: 100% !important;
