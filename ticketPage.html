@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Company Logo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .upload-label {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #b3aea9;
+        /* Adjust color to match your design */
+        cursor: pointer;
+        border-bottom: 1px solid #e0dedb;
+        /* Adjust color to match your design */
+        padding-bottom: 8px;
+        
+        /* Make the label full width */
+    }
+
+    .upload-label::after {
+        content: '\2709';
+        /* Paperclip icon */
+        margin-left: auto;
+        font-size: 18px;
+        color: #b3aea9;
+        /* Adjust color to match your design */
+    }
+
+    input[type="file"] {
+        display: none;
+        /* Hide the default file input */
+    }
+</style>
+
+<body>
+    <div class="container mt-5">
+        <div class="form-group">
+            <label for="uploadLogo" class="upload-label">
+                Upload Company Logo
+                <input type="file" id="uploadLogo" class="form-control-file">
+            </label>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
