@@ -1,52 +1,57 @@
+/* Existing Styles */
+
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     color: #52525b;
-
-}
-
-.login-img-sty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Image Styling */
+.login-img-sty {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Left Section Styling */
 #left {
     background-color: #7706CD;
-    height: 140vh;
+    height: 140vh; /* Adjusted height to fit screen */
 }
 
 .container-sty {
     background-color: white;
     border-radius: 2%;
-    width: 80%;
+    width: 90%;
+    max-width: 80%;
+    padding: 2rem; /* Add padding */
 }
 
 .input-bottom-border {
     border: none;
     border-bottom: 2px solid #9e9e9e;
     outline: none;
-    padding: 2%;
-    width: 90%;
-    line-height: 1;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't exceed width */
 }
 
-.input-bottom-border::placeholder{
+.input-bottom-border::placeholder {
     color: #b3aea9;
 }
 
 .login-button {
     background-color: #7706CD;
     color: white;
-    width: 90%;
+    width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 4%;
+    padding: 10px;
 }
 
 .upload-label {
@@ -54,17 +59,17 @@ body {
     align-items: center;
     font-size: 16px;
     color: #b3aea9;
-    margin-left: 5%;
     margin-top: 20px;
-    padding: 2%;
-    width: 90%;
+    padding: 10px;
+    width: 100%;
     cursor: pointer;
     border-bottom: 2px solid #9e9e9e;
     padding-bottom: 8px;
 }
 
 .upload-label::after {
-    content: '\2709';
+    content: '\f093'; /* Unicode for file upload icon */
+    font-family: "FontAwesome";
     margin-left: auto;
     font-size: 18px;
     color: #b3aea9;
@@ -75,14 +80,51 @@ input[type="file"] {
     /* Hide the default file input */
 }
 
-@media (max-width:450px) {
-    .login-img-sty {
-        width: 100% !important;
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    #left {
+        height: auto; /* Allow the content to determine height */
+        padding: 40px 0;
+    }
+    .container-sty {
+        width: 90%;
     }
 }
 
-@media (max-width:767px) {
+@media (max-width: 992px) {
+    .container-sty {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-sty {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-sty {
+        width: 100%;
+    }
+    
+    .upload-label {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .login-button {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 450px) {
     .login-img-sty {
-        width: 80%;
+        width: 100%;
+    }
+    
+    #left {
+        padding: 20px 0;
     }
 }
