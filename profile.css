@@ -1,6 +1,3 @@
-/* Existing Styles */
-
-/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,34 +8,32 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Image Styling */
 .login-img-sty {
-    width: 100%;
-    max-width: 400px;
+    width: 80%;
     height: auto;
+
 }
 
-/* Left Section Styling */
 #left {
     background-color: #7706CD;
-    height: 140vh; /* Adjusted height to fit screen */
+    height: 140vh; 
 }
 
 .container-sty {
     background-color: white;
-    border-radius: 2%;
+    border-radius: 10px;
     width: 90%;
     max-width: 80%;
-    padding: 2rem; /* Add padding */
+    padding: 2rem;
 }
 
 .input-bottom-border {
     border: none;
-    border-bottom: 2px solid #9e9e9e;
+    border-bottom: 1px solid #9e9e9e;
     outline: none;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't exceed width */
+    box-sizing: border-box;
 }
 
 .input-bottom-border::placeholder {
@@ -63,12 +58,12 @@ body {
     padding: 10px;
     width: 100%;
     cursor: pointer;
-    border-bottom: 2px solid #9e9e9e;
+    border-bottom: 1px solid #9e9e9e;
     padding-bottom: 8px;
 }
 
 .upload-label::after {
-    content: '\f093'; /* Unicode for file upload icon */
+    content:url("icon/upload-icon.png");
     font-family: "FontAwesome";
     margin-left: auto;
     font-size: 18px;
@@ -77,13 +72,15 @@ body {
 
 input[type="file"] {
     display: none;
-    /* Hide the default file input */
 }
 
-/* Responsive Adjustments */
+input::placeholder {
+    color: #9e9e9e;
+    font-size: 18px;
+}
 @media (max-width: 1200px) {
     #left {
-        height: auto; /* Allow the content to determine height */
+        height: auto;
         padding: 40px 0;
     }
     .container-sty {
