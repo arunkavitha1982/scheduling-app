@@ -158,3 +158,12 @@ i,
 .span {
     float: inline-end;
 }
+
+#navbarDropdown {
+    padding-left: 18%;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}

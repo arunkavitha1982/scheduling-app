@@ -188,12 +188,12 @@ tr {
     border-top: 1px solid inherit;
 }
 
-tr th{
+tr th {
     color: #7706CD !important;
     text-align: center !important;
 }
 
-td{
+td {
     text-align: center;
 }
 
@@ -203,27 +203,27 @@ td{
     width: 100%;
 }
 
-table{
+table {
     width: 100%;
 }
 
-.text-muted{
+.text-muted {
     font-size: 12px;
 }
 
-label{
+label {
     font-weight: bold;
     color: black;
 }
 
-#details1{
+#details1 {
     text-align: left;
 }
+
 #navbarDropdown {
     padding-left: 18%;
     color: white;
 }
-
 a{
     text-decoration: none;
 }

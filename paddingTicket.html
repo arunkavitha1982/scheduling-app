@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,7 +27,6 @@
 
     <style>
         /* Custom Styles */
-       
     </style>
 </head>
 
@@ -38,37 +38,46 @@
                     <!-- Sidebar -->
                     <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left">
                         <img src="images/login img.png" alt="Company Logo" width="80px">
-                        
-                        <p class="mt-5 para"><img src="icon/Mask group-2.png" id="icon"><span class="content">Dashboard</span></p>
 
+                        <a href="dashboard.html">
+                            <p class="mt-5 para"><img src="icon/Mask group-2.png" id="icon"><span
+                                    class="content">Dashboard</span></p>
+                        </a>
                         <p class="para">
-                            <div class="nav-item dropdown" style="display: inline-flex;">
-                                <img src="icon/Mask group-3.png" id="icon2">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 22%; color: white;">
-                                    Ticket
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Pending Ticket</a></li>
-                                    <li><a class="dropdown-item" href="#">In-Progress</a></li>
-                                    <li><a class="dropdown-item" href="#">Ready for Invoice</a></li>
-                                    <li><a class="dropdown-item" href="#">Completed Ticket</a></li>
-                                </ul>
-                            </div>
+                        <div class="nav-item dropdown" style="display: inline-flex;">
+                            <img src="icon/Mask group-3.png" id="icon2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                style="padding-left: 22%; color: white;">
+                                Ticket
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="paddingTicket.html">Pending Ticket</a></li>
+                                <li><a class="dropdown-item" href="Inprocess.html">In-Progress</a></li>
+                                <li><a class="dropdown-item" href="invoice.html">Ready for Invoice</a></li>
+                                <li><a class="dropdown-item" href="completed.html">Completed Ticket</a></li>
+                            </ul>
+                        </div>
                         </p>
 
-                        <p class="para"><img src="icon/Mask group.png" id="icon"><span class="content">Employees</span></p>
-                        <p class="para"><img src="icon/Mask group-1.png" id="icon"><span class="content">Profile</span></p>
-                        <p style="position: fixed; bottom: 0; display: inline-flex;">
-                            <img src="icon/Mask group-1.png" id="icon">
-                            <span class="content">Logout</span>
-                        </p>
+                       <a href="employee_ticket.html"><p class="para"><img src="icon/Mask group.png" id="icon"><span class="content">Employees</span>
+                        </p></a>
+                        <a href="home-profile.html"><p class="para"><img src="icon/Mask group-1.png" id="icon"><span class="content">Profile</span>
+                        </p></a>
+                        <a href="index.html">
+                            <p style="position: fixed; bottom: 0; display: inline-flex;">
+                                <img src="icon/Mask group-1.png" id="icon">
+                                <span class="content">Logout</span>
+                            </p>
+                        </a>
                     </div>
 
                     <!-- Main Content -->
                     <div class="col-sm-12 col-xl-10 col-md-10 col-lg-10 col-sty" id="fix">
-                        <p style="box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5); margin-left: -12px; padding: 20px; margin-right: -12px; font-weight: bold;">
-                            Admin <span class="span">XYZ Company <img src="icon/Mask group (2).png" alt="" style="width: 40px; padding-left: 10px;"></span>
+                        <p
+                            style="box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5); margin-left: -12px; padding: 20px; margin-right: -12px; font-weight: bold;">
+                            Admin <span class="span">XYZ Company <img src="icon/Mask group (2).png" alt=""
+                                    style="width: 40px; padding-left: 10px;"></span>
                         </p>
 
                         <div class="container container-sty">
@@ -108,21 +117,27 @@
 
                                                     <div class="col-md-4">
                                                         <strong>Customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
                                                             <option>Meera</option>
                                                         </select>
-                                                        <small class="text-muted">Please note this employee already has 5 works ongoing</small>
+                                                        <small class="text-muted">Please note this employee already has
+                                                            5 works ongoing</small>
                                                     </div>
 
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
                                                         <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat.</p>
+                                                        <p>The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">Assign</button>
@@ -149,7 +164,8 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok
                                                             Nagar, Chennai, Tamil Nadu
                                                             600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>
@@ -205,7 +221,8 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok
                                                             Nagar, Chennai, Tamil Nadu
                                                             600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>
@@ -261,7 +278,8 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok
                                                             Nagar, Chennai, Tamil Nadu
                                                             600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>
@@ -317,7 +335,8 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok
                                                             Nagar, Chennai, Tamil Nadu
                                                             600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>
@@ -373,7 +392,8 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok
+                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok
                                                             Nagar, Chennai, Tamil Nadu
                                                             600083</p>
                                                         <label for="employeeName" class="mt-3">Employee Name</label>

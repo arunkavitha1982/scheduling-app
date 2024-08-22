@@ -23,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="paddingTicket.css">
+    <link rel="stylesheet" href="Inprocess.css">
 
     <style>
         /* Custom Styles */
@@ -39,9 +39,10 @@
                     <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left">
                         <img src="images/login img.png" alt="Company Logo" width="80px">
 
-                        <p class="mt-5 para"><img src="icon/Mask group-2.png" id="icon"><span
-                                class="content">Dashboard</span></p>
-
+                        <a href="dashboard.html">
+                            <p class="mt-5 para"><img src="icon/Mask group-2.png" id="icon"><span
+                                    class="content">Dashboard</span></p>
+                        </a>
                         <p class="para">
                         <div class="nav-item dropdown" style="display: inline-flex;">
                             <img src="icon/Mask group-3.png" id="icon2">
@@ -51,22 +52,24 @@
                                 Ticket
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Pending Ticket</a></li>
-                                <li><a class="dropdown-item" href="#">In-Progress</a></li>
-                                <li><a class="dropdown-item" href="#">Ready for Invoice</a></li>
-                                <li><a class="dropdown-item" href="#">Completed Ticket</a></li>
+                                <li><a class="dropdown-item" href="paddingTicket.html">Pending Ticket</a></li>
+                                <li><a class="dropdown-item" href="Inprocess.html">In-Progress</a></li>
+                                <li><a class="dropdown-item" href="invoice.html">Ready for Invoice</a></li>
+                                <li><a class="dropdown-item" href="completed.html">Completed Ticket</a></li>
                             </ul>
                         </div>
                         </p>
 
-                        <p class="para"><img src="icon/Mask group.png" id="icon"><span class="content">Employees</span>
-                        </p>
-                        <p class="para"><img src="icon/Mask group-1.png" id="icon"><span class="content">Profile</span>
-                        </p>
-                        <p style="position: fixed; bottom: 0; display: inline-flex;">
-                            <img src="icon/Mask group-1.png" id="icon">
-                            <span class="content">Logout</span>
-                        </p>
+                       <a href="employee_ticket.html"><p class="para"><img src="icon/Mask group.png" id="icon"><span class="content">Employees</span>
+                        </p></a>
+                        <a href="home-profile.html"><p class="para"><img src="icon/Mask group-1.png" id="icon"><span class="content">Profile</span>
+                        </p></a>
+                        <a href="index.html">
+                            <p style="position: fixed; bottom: 0; display: inline-flex;">
+                                <img src="icon/Mask group-1.png" id="icon">
+                                <span class="content">Logout</span>
+                            </p>
+                        </a>
                     </div>
 
                     <!-- Main Content -->
@@ -99,7 +102,7 @@
                                     </thead>
                                     <tbody>
                                         <tr data-bs-toggle="collapse" data-bs-target="#details1">
-                                            <td><i class="bi bi-chevron-down collapse-icon"></i></td>
+                                            <td></td>
                                             <td>001</td>
                                             <td>AC</td>
                                             <td>Rohith</td>
