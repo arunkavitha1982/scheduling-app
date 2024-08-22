@@ -66,7 +66,7 @@
                         </p></a>
                         <a href="index.html">
                             <p style="position: fixed; bottom: 0; display: inline-flex;">
-                                <img src="icon/Mask group-1.png" id="icon">
+                                <img src="icon/Vector.png" id="icon">
                                 <span class="content">Logout</span>
                             </p>
                         </a>
@@ -81,7 +81,7 @@
                         </p>
 
                         <div class="container container-sty">
-                            <h1 class="text-center m-3 mt-5 fw-bold ">Pending Tickets</h1>
+                            <h1 class="text-center m-3 mt-5 fw-bold ">In-Progress</h1>
                             <div class="input-box d-flex justify-content-center">
                                 <input type="text" class="form-control " placeholder="Search">
                                 <i class="fa fa-search"></i>
@@ -116,10 +116,10 @@
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-4">
-                                                        <strong>Customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
                                                             Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -132,8 +132,8 @@
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
                                                             effectively, blowing warm air despite long cooling cycles.
                                                             This could be due to low refrigerant levels, a dirty air
                                                             filter, a malfunctioning compressor, or a faulty thermostat.
@@ -151,6 +151,58 @@
                                                 </div>
                                             </td>
                                         </tr>
+
+                                        <tr data-bs-toggle="collapse" data-bs-target="#details2">
+                                            <td><i class="bi bi-chevron-down collapse-icon"></i></td>
+                                            <td>001</td>
+                                            <td>AC</td>
+                                            <td>Rohith</td>
+                                            <td>01234 56789</td>
+                                            <td>12/12/2024</td>
+                                            <td>Ashok Nagar</td>
+                                        </tr>
+                                        <tr class="collapse details-row" id="details2">
+                                            <td colspan="7">
+                                                <div class="row">
+                                                    <div class="col-md-1"></div>
+
+                                                    <div class="col-md-4">
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
+                                                        <select class="form-select mt-2" id="employeeName">
+                                                            <option>Ganesh</option>
+                                                            <option>Rohith</option>
+                                                            <option>Meera</option>
+                                                        </select>
+                                                        <small class="text-muted">Please note this employee already has
+                                                            5 works ongoing</small>
+                                                    </div>
+
+                                                    <div class="col-md-1"></div>
+
+                                                    <div class="col-md-6">
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <button class="btn btn-assign">
+                                                                    Change
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-6">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
                                         <tr data-bs-toggle="collapse" data-bs-target="#details3">
                                             <td><i class="bi bi-chevron-down collapse-icon"></i></td>
                                             <td>001</td>
@@ -163,13 +215,13 @@
                                         <tr class="collapse details-row" id="details3">
                                             <td colspan="7">
                                                 <div class="row">
+                                                    <div class="col-md-1"></div>
+
                                                     <div class="col-md-4">
-                                                        <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
-                                                            Ave, Ashok
-                                                            Nagar, Chennai, Tamil Nadu
-                                                            600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -178,18 +230,16 @@
                                                         <small class="text-muted">Please note this employee already has
                                                             5 works ongoing</small>
                                                     </div>
+
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
-                                                            effectively, blowing warm air
-                                                            despite long cooling cycles. This could be due to low
-                                                            refrigerant levels, a dirty
-                                                            air filter, a malfunctioning compressor, or a faulty
-                                                            thermostat. To address this
-                                                            issue, check and replace the air filter, have a professional
-                                                            inspect.</p>
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">
@@ -197,7 +247,6 @@
                                                                 </button>
                                                             </div>
                                                             <div class="col-6">
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -218,13 +267,13 @@
                                         <tr class="collapse details-row" id="details4">
                                             <td colspan="7">
                                                 <div class="row">
+                                                    <div class="col-md-1"></div>
+
                                                     <div class="col-md-4">
-                                                        <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
-                                                            Ave, Ashok
-                                                            Nagar, Chennai, Tamil Nadu
-                                                            600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -233,18 +282,16 @@
                                                         <small class="text-muted">Please note this employee already has
                                                             5 works ongoing</small>
                                                     </div>
+
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
-                                                            effectively, blowing warm air
-                                                            despite long cooling cycles. This could be due to low
-                                                            refrigerant levels, a dirty
-                                                            air filter, a malfunctioning compressor, or a faulty
-                                                            thermostat. To address this
-                                                            issue, check and replace the air filter, have a professional
-                                                            inspect.</p>
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">
@@ -252,7 +299,6 @@
                                                                 </button>
                                                             </div>
                                                             <div class="col-6">
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -273,13 +319,13 @@
                                         <tr class="collapse details-row" id="details5">
                                             <td colspan="7">
                                                 <div class="row">
+                                                    <div class="col-md-1"></div>
+
                                                     <div class="col-md-4">
-                                                        <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
-                                                            Ave, Ashok
-                                                            Nagar, Chennai, Tamil Nadu
-                                                            600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -288,18 +334,16 @@
                                                         <small class="text-muted">Please note this employee already has
                                                             5 works ongoing</small>
                                                     </div>
+
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
-                                                            effectively, blowing warm air
-                                                            despite long cooling cycles. This could be due to low
-                                                            refrigerant levels, a dirty
-                                                            air filter, a malfunctioning compressor, or a faulty
-                                                            thermostat. To address this
-                                                            issue, check and replace the air filter, have a professional
-                                                            inspect.</p>
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">
@@ -307,7 +351,6 @@
                                                                 </button>
                                                             </div>
                                                             <div class="col-6">
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -328,13 +371,13 @@
                                         <tr class="collapse details-row" id="details6">
                                             <td colspan="7">
                                                 <div class="row">
+                                                    <div class="col-md-1"></div>
+
                                                     <div class="col-md-4">
-                                                        <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
-                                                            Ave, Ashok
-                                                            Nagar, Chennai, Tamil Nadu
-                                                            600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -343,18 +386,16 @@
                                                         <small class="text-muted">Please note this employee already has
                                                             5 works ongoing</small>
                                                     </div>
+
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
-                                                            effectively, blowing warm air
-                                                            despite long cooling cycles. This could be due to low
-                                                            refrigerant levels, a dirty
-                                                            air filter, a malfunctioning compressor, or a faulty
-                                                            thermostat. To address this
-                                                            issue, check and replace the air filter, have a professional
-                                                            inspect.</p>
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">
@@ -362,7 +403,6 @@
                                                                 </button>
                                                             </div>
                                                             <div class="col-6">
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -383,13 +423,13 @@
                                         <tr class="collapse details-row" id="details7">
                                             <td colspan="7">
                                                 <div class="row">
+                                                    <div class="col-md-1"></div>
+
                                                     <div class="col-md-4">
-                                                        <strong style="font-weight: bold;">customer Address</strong>
-                                                        <p class="pt-2">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
-                                                            Ave, Ashok
-                                                            Nagar, Chennai, Tamil Nadu
-                                                            600083</p>
-                                                        <label for="employeeName" class="mt-3">Employee Name</label>
+                                                        <strong id="lable" class="d-flex justify-content-left">Customer Address</strong>
+                                                        <p class="pt-2" style="font-size: 13px;text-align: left;">KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th
+                                                            Ave, Ashok Nagar, Chennai, Tamil Nadu 600083</p>
+                                                        <label for="employeeName" class="mt-3 d-flex justify-content-left" id="lable">Employee Name</label>
                                                         <select class="form-select mt-2" id="employeeName">
                                                             <option>Ganesh</option>
                                                             <option>Rohith</option>
@@ -398,18 +438,16 @@
                                                         <small class="text-muted">Please note this employee already has
                                                             5 works ongoing</small>
                                                     </div>
+
                                                     <div class="col-md-1"></div>
 
                                                     <div class="col-md-6">
-                                                        <strong>Description:</strong>
-                                                        <p>The air conditioner is running but not cooling the room
-                                                            effectively, blowing warm air
-                                                            despite long cooling cycles. This could be due to low
-                                                            refrigerant levels, a dirty
-                                                            air filter, a malfunctioning compressor, or a faulty
-                                                            thermostat. To address this
-                                                            issue, check and replace the air filter, have a professional
-                                                            inspect.</p>
+                                                        <strong class="d-flex justify-content-left">Description:</strong>
+                                                        <p style="font-size: 16px;text-align: left;" class="pt-2">The air conditioner is running but not cooling the room
+                                                            effectively, blowing warm air despite long cooling cycles.
+                                                            This could be due to low refrigerant levels, a dirty air
+                                                            filter, a malfunctioning compressor, or a faulty thermostat.
+                                                        </p>
                                                         <div class="row">
                                                             <div class="col-6">
                                                                 <button class="btn btn-assign">
@@ -417,7 +455,6 @@
                                                                 </button>
                                                             </div>
                                                             <div class="col-6">
-
                                                             </div>
                                                         </div>
                                                     </div>

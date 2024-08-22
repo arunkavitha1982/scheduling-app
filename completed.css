@@ -227,3 +227,6 @@ label {
 a{
     text-decoration: none;
 }
+th{
+    border-top: 1px solid;
+}

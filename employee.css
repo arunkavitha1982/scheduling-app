@@ -188,12 +188,12 @@ tr {
     border-top: 1px solid inherit;
 }
 
-tr th{
+tr th {
     color: #7706CD !important;
     text-align: center !important;
 }
 
-td{
+td {
     text-align: center;
 }
 
@@ -203,27 +203,58 @@ td{
     width: 100%;
 }
 
-table{
+table {
     width: 100%;
 }
 
-.text-muted{
+.text-muted {
     font-size: 12px;
 }
 
-label{
+label {
     font-weight: bold;
     color: black;
 }
 
-#details1{
+#details1 {
     text-align: left;
 }
+
 #navbarDropdown {
     padding-left: 18%;
     color: white;
 }
 
-a{
+a {
     text-decoration: none;
+}
+
+th {
+    border-top: 1px solid #ced4da;
+}
+
+.employee,.remove {
+    float: inline-end;
+    border: 1px solid #7706CD;
+    color: #7706CD;
+    padding: 5px 30px 5px 30px;
+    margin-right: 5%;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.modify{
+    float: inline-end;
+    border: 1px solid #7706CD;
+    color: white;
+    padding: 5px 30px 5px 30px;
+    margin-right: 5%;
+    background-color: #7706CD;
+    border-radius: 5px;
+}
+
+select{
+    border: 1px solid #ced4da;
+    width: 60%;
+    padding: 7px;
+    border-radius: 5px;
 }
