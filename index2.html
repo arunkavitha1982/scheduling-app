@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Dropdown</title>
+    <style>
+        .notification-display {
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 50px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <p>Notification</p>
+            <select id="notification-dropdown" class="form-select">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <ul id="notification-list" class="list-group list-group-flush custom-list" style="display: none;">
+                <li class="list-group-item">Daily Summary: You have 5 pending tickets, 3 in progress, and 2 completed today.</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+                <li class="list-group-item">A new employee, John Doe, has been added to the scheduling app. Welcome them to the team.</li>
+                <li class="list-group-item">Ticket #1617 has been successfully closed. Great job!</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+                <li class="list-group-item">A new ticket has been received. Please assign an employee.</li>
+            </ul>
+            <div id="notification-display" class="notification-display">
+                <!-- Selected notification will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the list items and store their text content in an array
+        const arr = Array.from(document.querySelectorAll('#notification-list .list-group-item')).map(item => item.textContent);
+
+        // Populate the dropdown with options
+        const dropdown = document.getElementById('notification-dropdown');
+        arr.forEach((text, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = `Notification ${index + 1}`; // Display as Notification 1, 2, 3, etc.
+            dropdown.appendChild(option);
+        });
+
+        // Event listener for dropdown change
+        dropdown.addEventListener('change', (event) => {
+            const selectedIndex = event.target.value;
+            const selectedText = arr[selectedIndex];
+            const displayDiv = document.getElementById('notification-display');
+
+            // Show the selected text
+            displayDiv.textContent = selectedText;
+        });
+
+        // Automatically trigger a click on the first dropdown option to display its content
+        window.addEventListener('DOMContentLoaded', () => {
+            dropdown.selectedIndex = 0; // Set the first option as selected
+            dropdown.dispatchEvent(new Event('change')); // Trigger change event to show first content
+        });
+    </script>
+</body>
+</html>
