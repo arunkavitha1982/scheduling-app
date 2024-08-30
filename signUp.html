@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="index.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="signUp.css">
+    <title>Sign Up</title>
 </head>
 
 <body>
@@ -18,18 +18,29 @@
         <div class="row">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-xl-6 col-md-6 col-lg-6 col-sty d-flex flex-column justify-content-center align-items-center order-2 order-xl-1"
-                        id="left">
-                        <div class="container container-sty  text-center">
-                            <h2 class="text-center m-3">Welcome Back</h2>
-                            <input type="text" class="input-bottom-border mt-3" placeholder="Username/Phone Number">
-                            <input id="password" placeholder="Password" type="password"
-                                class="input-bottom-border mt-3">
+                    <div class="col-sm-12 col-xl-5 col-md-5 col-lg-5 col-sty d-flex flex-column justify-content-center align-items-center order-1 order-xl-2"
+                        id="fix">
+                        <img src="images/login img.png" alt="Login Image" class="m-4 p-5 img-fluid login-img-sty">
+                        <h3 class="text-center">
+                            Welcome to <span>CraftPlanPro</span>
+                        </h3>
+                        <p class="text-center pt-2 fs-5">
+                            Streamline Task Allocation and Optimize Employee Productivity
+                        </p>
+                    </div>
 
+                    <div class="col-sm-12 col-xl-7 col-md-7 col-lg-7 col-sty d-flex flex-column justify-content-center align-items-center order-2 order-xl-1"
+                        id="left">
+                        <div class="container container-sty text-center">
+                            <h2 class="text-center m-3 fw-bold">Sign Up</h2>
+                            <input type="text" class="input-bottom-border mt-4" placeholder="Username/Phone Number">
+                            <input id="password" placeholder="Password" type="password"
+                                class="input-bottom-border mt-4">
+                            <input id="confirm-password" placeholder="Confirm password" type="password"
+                                class="input-bottom-border mt-4">
                             <button type="submit" class="mt-5 login-button">Submit</button>
 
-                            <p class="mt-4 fw-bold">or login with</p>
-                            <!-- Icons Row -->
+                            <p class="mt-4" style="font-size: 18px;color: #52525b;">or Sign up with</p>
                             <div class="row mt-4 d-flex justify-content-center align-items-center" class="Icons">
                                 <div class="col-2">
                                     <i class="fab fa-apple fa-2x"></i>
@@ -43,16 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6 col-md-6 col-lg-6 col-sty d-flex flex-column justify-content-center align-items-center order-1 order-xl-2"
-                        id="image">
-                        <img src="images/login img.png" alt="Login Image" class="m-4 p-5 img-fluid login-img-sty">
-                        <h3 class="text-center">
-                            Welcome to <span>CraftPlanPro</span>
-                        </h3>
-                        <p class="text-center pt-2">
-                            Streamline Task Allocation and Optimize Employee Productivity
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </div>
