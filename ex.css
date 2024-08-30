@@ -21,8 +21,7 @@ body {
 }
 
 .list-group-item {
-    position: relative; 
-    display: block;
+    position: relative;
     list-style: circle;
     padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
     color: var(--bs-list-group-color);
@@ -30,7 +29,12 @@ body {
     background-color: var(--bs-list-group-bg);
     border:none;
 }
-
+.custom-list li::before {
+    content: "• ";
+    color: black; 
+    font-size: 20px;
+    margin-right: 10px;
+}
 .bg-purple:hover,
 .bg-purple:focus {
     background-color: #7706CD;
@@ -80,6 +84,22 @@ a {
     padding: 20px;
     border-radius: 10px;
 }
+.chart-container2 {
+    background-color: white;
+    padding: 10px 15px 30px ; /* Adjusted padding */
+    border-radius: 10px;
+    width: 100%; /* Full width of the parent column */
+    height: 235px; /* Adjust height to fit your content */
+    position: relative;
+}
+.card-title {
+    font-weight: bold; /* Makes the title bold */
+    margin-bottom: 5px; /* Adjusted spacing */
+}
+.card-text {
+    font-weight: normal; /* Subtitle style */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
 
 .btn-group button {
     margin-left: 3%;
@@ -103,6 +123,13 @@ a {
     text-align: center;
     border-radius: 20px;
     margin: 0 auto;
+    border: 1px solid #7706CD;
+}
+.box3 {
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    
     border: 1px solid #7706CD;
 }
 
@@ -133,3 +160,6 @@ a {
 .gradient-purple {
     background-image: linear-gradient(to bottom, #9E58FF, #6A3EA8);
 }
+
+
+

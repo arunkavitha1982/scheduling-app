@@ -21,6 +21,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="ex.css">
 
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -119,8 +120,16 @@
                                         </div>
                                     </div>
                                     <div class="row mt-5">
-                                        <div class="col-4"></div>
-                                        <div class="col-8">
+                                        <div class="col-5">
+                                            <div class="chart-container2">
+                                                <p class="card-title ms-3" style="font-weight: bold; margin-bottom: 5px;">Revenue
+                                                    <span class="card-text" style="font-weight: normal;">(Last Four months)</span>
+                                                </p>
+                                                <canvas id="myChart2"></canvas>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="col-7">
                                             <div class="box-border mb-4">
                                                 <h5 style="font-weight:  bolder;" class="mb-4">Employees Count</h5>
                                                 <div class="row mt-3">
@@ -131,7 +140,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="box2">
+                                                        <div class="box3">
                                                             <h3>13</h3>
                                                             <p>Available Employees</p>
                                                         </div>
@@ -145,34 +154,8 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <p style="font-weight: bolder;">Notification</p>
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">Daily Summary: You have 5 pending tickets, 3
-                                                    in
-                                                    progress, and 2 completed today.</li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
-                                                <li class="list-group-item">A new employee, John Doe, has been added to
-                                                    the
-                                                    scheduling app. Welcome them to the team.</li>
-                                                <li class="list-group-item">Ticket #1617 has been successfully closed.
-                                                    Great job!
-                                                </li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
-                                                <li class="list-group-item">A new ticket has been received. Please
-                                                    assign an
-                                                    employee.</li>
+                                            <ul class="list-group list-group-flush custom-list" id="list-group-flush">
+                                                <!-- List items will be dynamically added here -->
                                             </ul>
                                         </div>
                                     </div>
@@ -185,13 +168,47 @@
         </div>
     </div>
 
+    <!-- JavaScript to dynamically populate notifications -->
+    <script>
+        // List of items to be added dynamically
+        const listItems = [
+            " Daily Summary: You have 5 pending tickets, 3 in progress, and 2 completed today.",
+            "A new ticket has been received. Please assign an employee.",
+            "A new ticket has been received. Please assign an employee.",
+            "A new ticket has been received. Please assign an employee.",
+            "A new employee, John Doe, has been added to the scheduling app. Welcome them to the team.",
+            "Ticket #1617 has been successfully closed. Great job!",
+            "A new ticket has been received. Please assign an employee.",
+            "A new ticket has been received. Please assign an employee.",
+            "A new ticket has been received. Please assign an employee."
+        ];
 
+        // Select the <ul> element with the class 'list-group-flush'
+        const ul = document.getElementById('list-group-flush');
+
+        // Loop through the listItems array and create <li> elements
+        for (let i = 0; i < listItems.length; i++) {
+            const list = document.createElement('li'); // Create a new list item (li) element
+
+            // Correctly add multiple classes
+            list.classList.add('list-group-item', 'custom-list'); 
+
+            // Set the text content of the list item
+            list.textContent = listItems[i];
+
+            // Append the list item to the <ul>
+            ul.appendChild(list);
+        }
+    </script>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <canvas id="myBarChart"></canvas>
+
+    <!-- Custom JavaScript -->
     <script src="script/dashboard.js"></script>
 </body>
 

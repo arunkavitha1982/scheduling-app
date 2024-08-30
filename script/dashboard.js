@@ -1,7 +1,7 @@
 const dataSets = {
     '12months': {
-        labels: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        data: [0,100, 150, 250, 200, 180, 140, 170, 150, 130, 120, 110, 180]
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        data: [0, 100, 150, 250, 200, 180, 140, 170, 150, 130, 120, 110, 180]
     },
     '6months': {
         labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
@@ -81,24 +81,49 @@ function updateChart(range, button) {
     chart.update();
 }
 
-// Revenue Chart Initialization
-let revenueCtx = document.getElementById('revenueChart').getContext('2d');
-new Chart(revenueCtx, {
+const months = ['Feb', 'Mar', 'Apr', 'May']; // Example labels
+
+// Get the context of the canvas element
+let ctx2 = document.getElementById('myChart2').getContext('2d');
+let chart2 = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['April', 'May', 'June', 'July'],
+        labels: months,
         datasets: [{
-            label: 'Revenue',
-            data: [5000, 7000, 6000, 8000],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
+            data: [200, 250, 150, 175], // Example data
+            backgroundColor: ['#C0C0C0', '#C0C0C0', '#C0C0C0', '#7706CD'], // Gray for first three bars, purple for the last
+            borderWidth: 0, // No border to match the design
+            barThickness: 10, // Set the bar thickness (adjust this value as needed)
+
         }]
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false // Hide legend to match your design
+            }
+        },
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                ticks: {
+                    color: '#999',
+                    stepSize: 100,
+                    callback: function(value) { return '$' + value; } // Add dollar signs
+                },
+                grid: {
+                    color: '#e0e0e0'
+                }
+            },
+            x: {
+                ticks: {
+                    color: '#999'
+                },
+                grid: {
+                    display: false
+                }
             }
         }
     }
