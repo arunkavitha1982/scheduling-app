@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="ex.css">
-
+    <link rel="stylesheet" href="ex.css"> 
+    
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -66,31 +66,31 @@
                     </div>
 
                     <!-- Main Content -->
-                    <div class="col-sm-12 col-xl-10 col-md-10 col-lg-10 col-sty" id="fix">
+                    <div class="col-sm-12 col-xl-10 col-md-10 col-lg-8 mx-auto " id="fix">
                         <div class="container p-4">
                             <div class="row">
                                 <div class="box-model">
                                     <h6 class="fw-bold">Today's Ticket Summary</h6>
                                     <div class="row p-3">
-                                        <div class="col-md-3">
+                                        <div class="col-12 col-sm-6 col-md-3 mb-3 ">
                                             <div class="box gradient-blue">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-12 col-sm-6 col-md-3 mb-3">
                                             <div class="box gradient-pink">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-12 col-sm-6 col-md-3 mb-3">
                                             <div class="box gradient-yellow">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-12 col-sm-6 col-md-3 mb-3">
                                             <div class="box gradient-purple">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
@@ -100,14 +100,51 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="container">
+                        <!-- <div class="container p-4">
                             <div class="row">
-                                <div class="col-8">
+                            
+                              <div class="col-12">
+                                <div class="box-model">
+                                  <h6 class="fw-bold">Today's Ticket Summary</h6>
+                                  <div class="row p-3">
+                                    
+                                    <div class="col-sm-6 col-md-3 mb-4">
+                                      <div class=" box gradient-blue text-center p-3">
+                                        <h3>23</h3>
+                                        <p>Total Tickets</p>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3 mb-4">
+                                      <div class="box gradient-pink text-center p-3">
+                                        <h3>23</h3>
+                                        <p>Total Tickets</p>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3 mb-4">
+                                      <div class="box gradient-yellow text-center p-3">
+                                        <h3>23</h3>
+                                        <p>Total Tickets</p>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3 mb-4">
+                                      <div class="box gradient-purple text-center p-3">
+                                        <h3>23</h3>
+                                        <p>Total Tickets</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
+                          
+                        <!-- <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
                                     <div class="card-body">
-                                        <div class="chart-container">
-                                            <div class="btn-group d-flex justify-content-center mb-5">
-                                                <p class="fs-6 text-start" style="text-align: start;">Ticket History</p>
+                                        <div class="chart-container ">
+                                            <div class="btn-group d-flex justify-content-center mb-5 flex-wrap">
+                                                <p class="fw-bold mt-3 p-2 w-100 text-start">Ticket History</p>
 
                                                 <button onclick="updateChart('12months', this)" class="active">12
                                                     Months</button>
@@ -115,13 +152,29 @@
                                                 <button onclick="updateChart('30days', this)">30 Days</button>
                                                 <button onclick="updateChart('7days', this)">7 Days</button>
                                                 <button onclick="updateChart('today', this)">Today</button>
-                                            </div>
+                                            </div> -->
+                                            <div class="container">
+                                                <div class="row">
+                                                  <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                                                    <div class="card-body">
+                                                      <div class="chart-container">
+                                                        <div class="btn-group d-flex justify-content-center mb-5 flex-wrap">
+                                                          <!-- Use a heading tag with responsive text utilities for "Ticket History" -->
+                                                          <p class="fw-bold mt-3 " style="text-align: start;">Ticket History</p>
+                                                          
+                                                          <!-- Responsive buttons with margin to ensure wrapping and proper alignment -->
+                                                          <button onclick="updateChart('12months', this)" class=" active">12 Months</button>
+                                                          <button onclick="updateChart('6months', this)">6 Months</button>
+                                                          <button onclick="updateChart('30days', this)" >30 Days</button>
+                                                          <button onclick="updateChart('7days', this)" >7 Days</button>
+                                                          <button onclick="updateChart('today', this)" >Today</button>
+                                                        </div>
                                             <canvas id="myChart"></canvas>
                                         </div>
                                     </div>
                                     <div class="row mt-5">
-                                        <div class="col-5">
-                                            <div class="chart-container2">
+                                        <div class="col-lg-5">
+                                            <div class="chart-container2 ">
                                                 <p class="card-title ms-3" style="font-weight: bold; margin-bottom: 5px;">Revenue
                                                     <span class="card-text" style="font-weight: normal;">(Last Four months)</span>
                                                 </p>
@@ -129,18 +182,18 @@
                                             </div>
                                         </div>
                                    
-                                        <div class="col-7">
-                                            <div class="box-border mb-4">
+                                        <div class="col-lg-7 col-md-10 col-sm-12 mx-auto">
+                                            <div class="box-border mb-4 ">
                                                 <h5 style="font-weight:  bolder;" class="mb-4">Employees Count</h5>
                                                 <div class="row mt-3">
-                                                    <div class="col-6">
-                                                        <div class="box2">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+                                                        <div class="box2 p-3">
                                                             <h3>23</h3>
                                                             <p>Total Employees</p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <div class="box3">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+                                                        <div class="box3 p-3">
                                                             <h3>13</h3>
                                                             <p>Available Employees</p>
                                                         </div>
@@ -150,11 +203,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4 mb-5">
                                     <div class="card">
                                         <div class="card-body">
                                             <p style="font-weight: bolder;">Notification</p>
-                                            <ul class="list-group list-group-flush custom-list" id="list-group-flush">
+                                            <ul class="list-group custom-list" id="list-group-flush">
                                                 <!-- List items will be dynamically added here -->
                                             </ul>
                                         </div>
@@ -206,7 +259,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <canvas id="myBarChart"></canvas>
+   
 
     <!-- Custom JavaScript -->
     <script src="script/dashboard.js"></script>
