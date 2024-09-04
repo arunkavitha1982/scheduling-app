@@ -28,13 +28,13 @@ body {
     text-decoration: none;
     background-color: var(--bs-list-group-bg);
     border:none;
-  
+    font-size: x-small;
 }
 .custom-list li::before {
     content: "• ";
     color: black; 
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 2px;
 }
 .bg-purple:hover,
 .bg-purple:focus {
