@@ -35,64 +35,55 @@
                 <div class="row">
                     <!-- Sidebar -->
                     <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty  " id="left">
-                        <!-- Toggle Button to open the sidebar -->
-                        <img src="images/logo.png" alt="Sidebar Logo"
-                            style="position: fixed; top: 35px; left: 20px; z-index: 999; width: 100px;font-weight: 1000; ">
-                        <button id="toggleButton" class="btn mt-3  ">&#9776;</button>
+                        <!-- Toggle Button -->
+                        <button id="toggleButton" class="btn">&#9776;</button>
 
-
-                        <!-- Overlay for dimming the background -->
+                        <!-- Overlay -->
                         <div id="overlay"></div>
 
                         <!-- Sidebar -->
                         <div id="sidebar">
-                            <div id="sidebar-header" class="m-4">
-                                <img src="images/logo.png" alt="Sidebar Logo">
-                                <!-- <button id="closeButton" class="btn btn-light">x</button>  -->
+                            <div id="sidebar-header" class="m-3">
+                                <img src="images/logo.png" alt="Sidebar Logo" style="width: 100%;">
                             </div>
-
                             <div id="sidebar-content">
                                 <div class="list-group list-group-flush">
-                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Dashboard</a>
-                                    <!-- Dropdown Menu -->
-                                    <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
+                                    <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
+                                    <a class="list-group-item list-group-item-action dropdown-toggle" href="#"
                                         id="ticketMenu" data-toggle="collapse" data-target="#ticketSubmenu"
                                         aria-expanded="false" aria-controls="ticketSubmenu">
                                         Ticket
                                     </a>
                                     <div id="ticketSubmenu" class="collapse">
-                                        <ul class="list-group list-group-flush bg-purple">
-                                            <li class="list-group-item bg-purple"><a href="#" class="text-white">Pending
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><a href="#" class=" bg-purple">Pending
                                                     Ticket</a></li>
-                                            <li class="list-group-item bg-purple"><a href="#"
-                                                    class="text-white">In-Progress</a></li>
-                                            <li class="list-group-item bg-purple"><a href="#" class="text-white">Ready
-                                                    for
+                                            <li class="list-group-item"><a href="#" class=" bg-purple">In-Progress</a>
+                                            </li>
+                                            <li class="list-group-item"><a href="#" class=" bg-purple">Ready for
                                                     Invoice</a></li>
-                                            <li class="list-group-item bg-purple"><a href="#"
-                                                    class="text-white">Completed
+                                            <li class="list-group-item"><a href="#" class=" bg-purple">Completed
                                                     Ticket</a></li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Employees</a>
-                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Profile</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Employees</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Profile</a>
                                     <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
-                                        <img src="icon/Vector.png" id="icon">
-                                        <span class="content text-white">Logout</span>
+                                        <img src="icon/Vector.png" id="icon" >
+                                        <span class="content text-white list-group-item">Logout</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Main Content -->
                     <div class="col-sm-12 col-xl-10 col-md-10 col-lg-8 mx-auto " id="fix">
                         <div class="container p-4">
-                            <div class="row " >
-                                <div class="box-model " >
+                            <div class="row ">
+                                <div class="box-model ">
                                     <h6 class="fw-bold ms-3 py-3">Today's Ticket Summary</h6>
                                     <div class="row ">
-                                        <div class="col-12 col-sm-6 col-md-3 mb-3 " >
+                                        <div class="col-12 col-sm-6 col-md-3 mb-3 ">
                                             <div class="box gradient-blue">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
@@ -175,7 +166,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 mb-5">
-                                    <div class="card">
+                                    <div class="card note">
                                         <div class="card-body">
                                             <p style="font-weight: bolder;">Notification</p>
                                             <ul class="list-group custom-list p-1" id="list-group-flush">

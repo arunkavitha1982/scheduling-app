@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleButton');
-    // const closeButton = document.getElementById('closeButton');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
 
@@ -15,14 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.remove('visible');
         overlay.style.display = 'none';
     });
-
-    // Close sidebar on close button click
-    // closeButton.addEventListener('click', function () {
-    //     sidebar.classList.remove('visible');
-    //     overlay.style.display = 'none';
-    // });
 });
-
 const dataSets = {
     '12months': {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

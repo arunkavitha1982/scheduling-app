@@ -55,8 +55,8 @@ a {
     border-radius: 10px;
 }
 
-.box {
-    padding: 20px;
+.box { 
+    padding: 20px; /* Default padding for medium to large screens */
     text-align: center;
     width: 85%;
     height: 90px;
@@ -73,6 +73,37 @@ a {
 .box p {
     font-size: 10px;
 }
+
+/* For small screens (mobile) */
+@media (max-width: 600px) {
+    .box {
+        padding: 10px; /* Less padding for small screens */
+    }
+
+    .box h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .box p {
+        font-size: 8px; /* Adjust font size */
+    }
+}
+
+/* For large screens (desktop) */
+@media (min-width: 1200px) {
+    .box {
+        padding: 30px; /* More padding for large screens */
+    }
+
+    .box h3 {
+        font-size: 30px; /* Adjust font size */
+    }
+
+    .box p {
+        font-size: 12px; /* Adjust font size */
+    }
+}
+
 
 #fix {
     background-color: #e9e9e9;
