@@ -1,231 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Sidebar Example</title>
-    <!-- Add Bootstrap CSS for styling -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Custom CSS -->
+    <title>Navbar with Toggle Button</title>
     <style>
-        * {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #7706CD;
-        }
-
+        /* General Styles */
         body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            font-family: Arial, sans-serif;
         }
 
-        #sidebar {
-            background-color: #7706CD;
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: -250px;
-            /* Hide sidebar initially */
-            z-index: 999;
-            overflow-y: auto;
-            transition: all 0.3s ease;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #sidebar.visible {
-            left: 0;
-            /* Sidebar slides in from the left */
-        }
-
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 998;
-            display: none;
-            /* Hidden initially */
-        }
-
-        .bg-purple {
-            background-color: #7706CD;
-            color: #fff;
-            border-bottom: none;
-        }
-
-        .text-white {
-            color: #fff;
-        }
-
-        .list-group-item {
-            background-color: #7706CD;
-            color: white;
-            border: none;
-        }
-
-        .list-group-item:hover {
-            background-color: #4B0082;
-        }
-
-        .btn {
-            color: white;
-        }
-
-        .btn:hover {
-            color: #7706CD;
-        }
-
-        /* Sidebar Header Styling */
-        #sidebar-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        #sidebar-header img {
-            width: 70%;
-        }
-
+        /* Toggle Button for Mobile */
         #toggleButton {
             position: fixed;
             top: 10px;
-            left: 170px;
-            /* Position it on the left side */
+            left: 10px; /* Adjust the position for mobile */
             background-color: #7706CD;
-            color: white;
             border: none;
-            font-size: 24px;
+            border-radius: 50%; /* Circular button */
+            width: 50px;
+            height: 50px;
             cursor: pointer;
-            z-index: 1000;
-            /* Ensure toggle button is always visible */
+            z-index: 1001; /* Ensure it stays above the navbar */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
         }
 
-        /* Sidebar Content Styling */
-        #sidebar-content {
-            flex-grow: 1;
+        .bar {
+            width: 30px;
+            height: 5px;
+            background-color: white; /* White bars */
+            margin: 3px 0;
+            border-radius: 5px; /* Rounded edges on the bars */
         }
 
-        #sidebar-content .list-group-item {
-            margin-bottom: 10px;
+        /* Navbar Styling */
+        .navbar {
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        #sidebar-content .list-group-item:last-child {
-            margin-bottom: 0;
+        /* Logo Styling */
+        .logo {
+            max-width: 135px; /* Set max width for the logo */
+            height: auto;
+            margin-left: auto; /* Align logo to the left */
         }
 
-        /* Close Button Styling */
-        #closeButton {
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
+        /* Media Queries for Mobile Screens */
+        @media (max-width: 767.98px) {
+            .navbar {
+                justify-content: space-between;
+                background-color: #7706CD;
+            }
+
+            .logo {
+                margin-left: 100px; /* Adjust logo position on mobile */
+            }
+
+            #toggleButton {
+                display: flex; /* Show toggle button on smaller screens */
+            }
         }
 
-        
+        /* Hide Toggle Button on Larger Screens */
+        @media (min-width: 768px) {
+            #toggleButton {
+                display: none; /* Hide toggle button on larger screens */
+            }
 
-       #ticketSubmenu a {
-            text-decoration: none;
-        }
-
-        #closeButton:hover {
-            color: #4B0082;
-        }
-
-        /* Adjusting layout to prevent overlap */
-        .container-fluid {
-            margin-top: 80px;
-            /* Ensure there's enough space for the fixed elements */
+            #sidebar {
+                left: 0; /* Sidebar visible by default on larger screens */
+            }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Toggle Button to open the sidebar -->
-    <img src="images/logo.png" alt="Sidebar Logo"
-        style="position: fixed; top: 35px; left: 40px; z-index: 999; width: 100px;font-weight: 1000; ">
-    <button id="toggleButton" class="btn mt-3">&#9776;</button>
-
-
-    <!-- Overlay for dimming the background -->
-    <div id="overlay"></div>
-
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <div id="sidebar-header" class="m-4">
-            <img src="images/logo.png" alt="Sidebar Logo">
-            <!-- <button id="closeButton" class="btn btn-light">x</button>  -->
-        </div>
-
-        <div id="sidebar-content">
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-purple">Dashboard</a>
-                <!-- Dropdown Menu -->
-                <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#" id="ticketMenu"
-                    data-toggle="collapse" data-target="#ticketSubmenu" aria-expanded="false"
-                    aria-controls="ticketSubmenu">
-                    Ticket
-                </a>
-                <div id="ticketSubmenu" class="collapse">
-                    <ul class="list-group list-group-flush bg-purple">
-                        <li class="list-group-item bg-purple"><a href="#" class="text-white">Pending
-                                Ticket</a></li>
-                        <li class="list-group-item bg-purple"><a href="#" class="text-white">In-Progress</a></li>
-                        <li class="list-group-item bg-purple"><a href="#" class="text-white">Ready for
-                                Invoice</a></li>
-                        <li class="list-group-item bg-purple"><a href="#" class="text-white">Completed
-                                Ticket</a></li>
-                    </ul>
-                </div>
-                <a href="#" class="list-group-item list-group-item-action bg-purple">Employees</a>
-                <a href="#" class="list-group-item list-group-item-action bg-purple">Profile</a>
-                <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
-                    <img src="icon/Vector.png" id="icon">
-                    <span class="content text-white">Logout</span>
-                </div>
-            </div>
-        </div>
+    <div class="navbar">
+        <!-- Logo on the left -->
+        <img src="images/logo.png" alt="Sidebar Logo" class="logo me-5" width="700px">
+        <!-- Toggle button on the right -->
+        <button id="toggleButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
     </div>
+<script src="script/dashboard.js">
 
-    <!-- Add jQuery and Bootstrap JS for interactivity -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JavaScript to toggle the sidebar and handle additional features -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('toggleButton');
-            // const closeButton = document.getElementById('closeButton');
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-
-            // Toggle sidebar visibility
-            toggleButton.addEventListener('click', function () {
-                sidebar.classList.toggle('visible');
-                overlay.style.display = sidebar.classList.contains('visible') ? 'block' : 'none';
-            });
-
-            // Close sidebar on overlay click
-            overlay.addEventListener('click', function () {
-                sidebar.classList.remove('visible');
-                overlay.style.display = 'none';
-            });
-
-            // Close sidebar on close button click
-            // closeButton.addEventListener('click', function () {
-            //     sidebar.classList.remove('visible');
-            //     overlay.style.display = 'none';
-            // });
-        });
-    </script>
+</script>
 </body>
-
 </html>

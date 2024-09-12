@@ -38,10 +38,15 @@
 
                         <div class="navbar">
                             <!-- Logo on the left -->
-                            <img src="images/logo.png" alt="Sidebar Logo" class="logo ms-3" width="100px">
+                            <img src="images/logo.png" alt="Sidebar Logo" class="logo me-5" width="700px">
                             <!-- Toggle button on the right -->
-                            <button id="toggleButton" class="btn mb-5">&#9776;</button>
+                            <button id="toggleButton">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </button>
                         </div>
+                    
 
                         <!-- Overlay -->
                         <div id="overlay"></div>
@@ -53,8 +58,8 @@
                             </div>
                             <div id="sidebar-content">
                                 <div class="list-group list-group-flush">
-                                    <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
-                                    <a class="list-group-item list-group-item-action dropdown-toggle" href="#"
+                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Dashboard</a>
+                                    <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
                                         id="ticketMenu" data-toggle="collapse" data-target="#ticketSubmenu"
                                         aria-expanded="false" aria-controls="ticketSubmenu">
                                         Ticket
@@ -71,8 +76,8 @@
                                                     Ticket</a></li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="list-group-item list-group-item-action">Employees</a>
-                                    <a href="#" class="list-group-item list-group-item-action">Profile</a>
+                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Employees</a>
+                                    <a href="#" class="list-group-item list-group-item-action bg-purple">Profile</a>
                                     <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
                                         <img src="icon/Vector.png" id="icon">
                                         <span class="content text-white list-group-item">Logout</span>
@@ -127,7 +132,7 @@
 
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                                <div class="col-lg-8 col-md-4 col-sm-2 mx-auto">
                                     <div class="card-body">
                                         <div class="chart-container">
                                             <div class="btn-group d-flex  mb-5 flex-wrap">
@@ -135,7 +140,7 @@
                                                 <p class="fw-bold mt-3 " style="text-align: start;">Ticket History</p>
 
                                                 <!-- Responsive buttons with margin to ensure wrapping and proper alignment -->
-                                                <button onclick="updateChart('12months', this)" class=" active">12
+                                                <button onclick="updateChart('12months', this)" class=" active ms-5">12
                                                     Months</button>
                                                 <button onclick="updateChart('6months', this)">6 Months</button>
                                                 <button onclick="updateChart('30days', this)">30 Days</button>

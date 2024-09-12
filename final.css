@@ -41,34 +41,7 @@ body {
     margin-right: 2px;
 }
 
-/* Button Group */
-.btn-group button {
-    margin-left: 4%;
-    padding:9px;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 11px;
-    text-align: justify;
-}
 
-.btn-group .active {
-    background-color: white;
-    border: 1px solid black;
-  
-    font-weight: bold;
-}
-
-/* Button */
-.btn {
-    color: white;
-}
-
-.btn:hover {
- 
-    background-color: #4B0082; /* Adjusted hover color */
-}
 
 /* Box Model */
 .box-model {
@@ -103,7 +76,7 @@ body {
 /* Box Borders */
 .box-border {
     background-color: white;
-    padding: 20px;
+    padding: 39px;
     border-radius: 10px;
 }
 
@@ -125,7 +98,7 @@ body {
 }
 
 .box2, .box3 {
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     border-radius: 20px;
     margin: 0 auto;
@@ -140,10 +113,15 @@ body {
     margin-bottom: 10px;
 }
 
-.box2 p, .box3 p {
+.box2 p {
     font-size: 11px;
     color: #666;
 }
+ .box3 p {
+    font-size: 9px;
+    color: #666;
+}
+
 
 
 
@@ -245,6 +223,7 @@ body {
 
 .list-group-item-action {
     background-color: #7706CD;
+    color: white;
 
 }
 
@@ -259,17 +238,95 @@ body {
     }
 }
 
-/* Toggle Button for Mobile */
+
+
+
+/* Button Group Container */
+.btn-group {
+    display: flex;                /* Aligns buttons in a row */
+    gap: 15px;                    /* Space between each button, adjust if needed */
+    align-items: center;          /* Aligns buttons vertically centered */
+}
+
+/* General Button Style */
+.btn-group button {
+    padding: 5px 12px;            /* Padding for consistent button sizing */
+    border: none;                 /* No default border for unselected buttons */
+    background-color: transparent;/* Transparent background for non-selected buttons */
+    color: #555;                  /* Light text color for non-selected buttons */
+    cursor: pointer;              /* Changes cursor to pointer on hover */
+    border-radius: 5px;           /* Rounded corners, adjust if needed */
+    font-size: 11px;              /* Font size for clear readability */
+    text-align: center;           /* Centers text within the button */
+    transition: all 0.2s ease;    /* Smooth transition for hover or selection effects */
+    font-weight: 500;             /* Medium weight for non-selected buttons */
+}
+
+/* Style for the Selected Button */
+.btn-group .active {
+    border: 1px solid #000;       /* Thin border for the selected button (adjust size if needed) */
+    background-color: #fff;       /* White background for the selected button */
+    font-weight: bold;            /* Bold text to indicate it's selected */
+    padding: 4px 10px;            /* Fine-tuned padding to match the design */
+    color: #000;                  /* Black text for high contrast */
+}
+
+/* Small devices (mobile phones, 320px and up) */
+@media (max-width: 480px) {
+    .btn-group {
+        gap: 8px;                /* Reduce the gap between buttons */
+    }
+    .btn-group button {
+        padding: 4px 8px;        /* Smaller padding for mobile screens */
+        font-size: 6px;         /* Smaller font size for better fit */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .btn-group {
+        gap: 12px;               /* Adjust the gap slightly for tablets */
+    }
+    .btn-group button {
+        padding: 5px 10px;       /* Adjust padding for medium screens */
+        font-size: 11px;         /* Slightly larger font size */
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 769px) {
+    .btn-group {
+        gap: 15px;               /* Default gap for desktop */
+    }
+    .btn-group button {
+        padding: 5px 12px;       /* Default padding for desktop */
+        font-size: 12px;         /* Slightly larger font size for readability */
+    }
+}
 #toggleButton {
     position: fixed;
     top: 10px;
-    right: 180px; /* Move to the right side for mobile */
+    left: 10px; /* Adjust the position for mobile */
     background-color: #7706CD;
-    color: white;
     border: none;
-    font-size: 24px;
+    border-radius: 50%; /* Circular button */
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     z-index: 1001; /* Ensure it stays above the navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* White bars */
+    margin: 3px 0;
+    border-radius: 5px; /* Rounded edges on the bars */
 }
 
 /* Navbar Styling */
@@ -278,33 +335,32 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    /* background-color: #7706CD; */
     z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space items in the navbar */
+    justify-content: space-between;
 }
 
 /* Logo Styling */
 .logo {
-    max-width: 100px; /* Set max width for the logo */
-    height: auto;     /* Maintain aspect ratio */
-    margin-right: auto; /* Align logo to the left by default */
+    max-width: 135px; /* Set max width for the logo */
+    height: auto;
+    margin-left: auto; /* Align logo to the left */
 }
 
 /* Media Queries for Mobile Screens */
 @media (max-width: 767.98px) {
     .navbar {
-        justify-content: space-between; /* Logo left and button right on mobile */
+        justify-content: space-between;
         background-color: #7706CD;
     }
 
     .logo {
-        margin-right: 0; /* Ensure the logo is on the left for mobile */
+        margin-left: 100px; /* Adjust logo position on mobile */
     }
 
     #toggleButton {
-        display: block; /* Show toggle button on smaller screens */
+        display: flex; /* Show toggle button on smaller screens */
     }
 }
 
