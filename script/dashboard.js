@@ -98,6 +98,7 @@ function updateChart(range, button) {
     chart.update();
 }
 
+<<<<<<< HEAD
 const months = ['Feb', 'Mar', 'Apr', 'May']; // Example labels
 
 // Get the context of the canvas element
@@ -145,3 +146,27 @@ let chart2 = new Chart(ctx2, {
         }
     }
 });
+=======
+// Revenue Chart Initialization
+let revenueCtx = document.getElementById('revenueChart').getContext('2d');
+new Chart(revenueCtx, {
+    type: 'bar',
+    data: {
+        labels: ['April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Revenue',
+            data: [5000, 7000, 6000, 8000],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+>>>>>>> 01067c6f4024bcd8c6b4afb7d4305ef963137d92
