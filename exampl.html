@@ -42,11 +42,13 @@
                             </div>
                             <div id="sidebar-content">
                                 <div class="list-group list-group-flush">
-                                    <a href="exampl.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group-2.png" style="width: 25px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Dashboard</span></a>
+                                    <a href="exampl.html" class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-2.png" style="width: 25px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Dashboard</span></a>
                                     <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
                                         id="ticketMenu" data-toggle="collapse" data-target="#ticketSubmenu"
-                                        aria-expanded="false" aria-controls="ticketSubmenu"><img src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
+                                        aria-expanded="false" aria-controls="ticketSubmenu"><img
+                                            src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
                                         <span style="padding-left: 10px;color: white;">Ticket</span>
                                     </a>
                                     <div id="ticketSubmenu" class="collapse">
@@ -66,9 +68,13 @@
                                         </ul>
                                     </div>
                                     <a href="employee_ticket.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group.png" style="width: 30px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Employees</span></a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Employees</span></a>
                                     <a href="home-profile.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group-1.png" style="width: 30px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Profile</span></a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-1.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Profile</span></a>
                                     <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
                                         <img src="icon/Vector.png" id="icon">
                                         <span class="content text-white list-group-item">Logout</span>
@@ -80,8 +86,14 @@
 
                     <!-- Main Content -->
                     <div class="col-sm-12 col-xl-10 col-md-10 col-lg-8 mx-auto" id="fix">
+                        <p
+                            style="box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);margin-left: -12px;padding: 20px;margin-right: -12px;font-weight: bold;">
+                            Admin <span class="span ">XYZ Company <img src="icon/Mask group (2).png" alt=""
+                                    style="width: 40px;padding-left: 10px;"></span>
+                        </p>
                         <div class="container p-4">
                             <div class="row">
+
                                 <div class="box-model">
                                     <h6 class="fw-bold ms-3 py-3">Today's Ticket Summary</h6>
                                     <div class="row">
@@ -104,7 +116,7 @@
                                             <div class="box gradient-yellow">
                                                 <h3>23</h3>
                                                 <p>Total Tickets</p>
-                                            </div>   
+                                            </div>
                                         </div>
                                         <!-- Fourth Box -->
                                         <div class="col-6 col-sm-6 col-md-3 mb-3">
@@ -118,29 +130,28 @@
                             </div>
                         </div>
 
-                            <div class="container m-1">
-                                <div class="row  ">
-                                    <div class=" col-lg-8  ">
-                                        <div class="card-body">
-                                            <div class="chart-container">
-                                                <div class="btn-group d-flex  mb-5 flex-wrap ">
-                                                    <!-- Use a heading tag with responsive text utilities for "Ticket History" -->
-                                                    <p class="fw-bold mt-3 " style="text-align: start;">Ticket History
-                                                    </p>
+                        <div class="container m-1">
+                            <div class="row  ">
+                                <div class=" col-lg-8  ">
+                                    <div class="card-body">
+                                        <div class="chart-container">
+                                            <div class="btn-group d-flex  mb-5 flex-wrap ">
+                                                <!-- Use a heading tag with responsive text utilities for "Ticket History" -->
+                                                <p class="fw-bold mt-3 " style="text-align: start;">Ticket History
+                                                </p>
 
-                                                    <!-- Responsive buttons with margin to ensure wrapping and proper alignment -->
-                                                    <button onclick="updateChart('12months', this)"
-                                                        class=" active ms-5">12
-                                                        Months</button>
-                                                    <button onclick="updateChart('6months', this)">6 Months</button>
-                                                    <button onclick="updateChart('30days', this)">30 Days</button>
-                                                    <button onclick="updateChart('7days', this)">7 Days</button>
-                                                    <button onclick="updateChart('today', this)">Today</button>
-                                                </div>
-                                                <canvas id="myChart" height="95%"></canvas>
+                                                <!-- Responsive buttons with margin to ensure wrapping and proper alignment -->
+                                                <button onclick="updateChart('12months', this)" class=" active ms-5">12
+                                                    Months</button>
+                                                <button onclick="updateChart('6months', this)">6 Months</button>
+                                                <button onclick="updateChart('30days', this)">30 Days</button>
+                                                <button onclick="updateChart('7days', this)">7 Days</button>
+                                                <button onclick="updateChart('today', this)">Today</button>
                                             </div>
+                                            <canvas id="myChart" height="95%"></canvas>
                                         </div>
-                                    
+                                    </div>
+
 
                                     <div class="row mt-4">
                                         <div class="col-lg-5 ">
@@ -226,7 +237,7 @@
             ul.appendChild(list);
         }
     </script>
- <script src="script/dashboard.js"></script>
+    <script src="script/dashboard.js"></script>
     <!-- Bootstrap JS Bundle -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
@@ -235,7 +246,7 @@
 
 
     <!-- Custom JavaScript -->
-   
+
 </body>
 
 </html>
