@@ -67,74 +67,34 @@ i,
     color: #ced4da;
 }
 
-
-
-
-@media (max-width: 1200px) {
-    #left {
-        height: auto;
-        padding: 40px 0;
-    }
-
-    .container-sty {
-        width: 90%;
-    }
+.list-group-item {
+    background-color: #7706CD !important;
+    color: white !important;
+    font-size: small !important;
+    border: none !important;
 }
 
-@media (max-width: 992px) {
-    .container-sty {
-        padding: 20px;
-    }
+
+.list-group-item-action {
+    background-color: #7706CD !important;
+    color: white !important;
+
 }
 
-@media (max-width: 768px) {
-    .container-sty {
-        width: 100%;
-        padding: 15px;
-    }
+.note .list-group-item {
+    position: relative !important;
+    list-style: circle !important;
+    padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x) !important;
+    color: var(--bs-list-group-color) !important;
+    text-decoration: none !important;
+    background-color: var(--bs-list-group-bg) !important;
+    border: none !important;
 
-    .content {
-        color: white;
-        padding-left: 2%;
-    }
+    font-size: x-small !important;
 }
 
-@media (max-width: 576px) {
-    .container-sty {
-        width: 100%;
-    }
-
-    .upload-label {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .login-button {
-        padding: 8px;
-    }
-}
-
-@media (max-width: 450px) {
-    .login-img-sty {
-        width: 100%;
-    }
-
-    #left {
-        padding: 20px 0;
-    }
-
-    .content {
-        color: white;
-        padding-left: 4%;
-    }
-
-    #icon {
-        margin-left: 2%;
-    }
-
-    #icon2 {
-        margin-left: 8%;
-    }
+.list-group-item a {
+    color: white;
 }
 
 
@@ -258,3 +218,72 @@ select{
     padding: 7px;
     border-radius: 5px;
 }
+
+@media (max-width: 1200px) {
+    #left {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .container-sty {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-sty {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-sty {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .content {
+        color: white;
+        padding-left: 2%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-sty {
+        width: 100%;
+    }
+
+    .upload-label {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .login-button {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 450px) {
+    .login-img-sty {
+        width: 100%;
+    }
+
+    #left {
+        padding: 20px 0;
+    }
+
+    .content {
+        color: white;
+        padding-left: 4%;
+    }
+
+    #icon {
+        margin-left: 2%;
+    }
+
+    #icon2 {
+        margin-left: 8%;
+    }
+}
+
+
