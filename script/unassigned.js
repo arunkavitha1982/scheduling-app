@@ -26,6 +26,7 @@ $(document).ready(function () {
                             <strong class="d-flex justify-content-left">Description:</strong>
                             <p style="font-size: 16px;text-align: left;" class="pt-2">${rowData.description}</p>
                             <div class="row">
+                               
                                 <div class="col-6">
                                      <div class="image-gallery">
                                         <img src="images/profile img.png" alt="Image 1" width="100px">
@@ -52,12 +53,12 @@ $(document).ready(function () {
             </tr>`;
     }
 
-    // Sample data for dynamic row details
+    // Sample data for dynamic row details with 10 total rows
     const rowDetails = [
         {
             ticketID: '001',
             address: 'KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok Nagar, Chennai, Tamil Nadu 600083',
-            description: 'AC issue with cooling.',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
             employees: [
                 { name: 'Ganesh', pending: 3 },
                 { name: 'Rohith', pending: 6 }, // More than 5, should be disabled
@@ -77,13 +78,87 @@ $(document).ready(function () {
         },
         {
             ticketID: '003',
-            address: 'No. 45, Second St, Besant Nagar, Chennai, Tamil Nadu 600090',
+            address: 'No. 20, Third St, Besant Nagar, Chennai, Tamil Nadu 600090',
+            description: 'Washing machine issue.',
+            employees: [
+                { name: 'Ganesh', pending: 1 },
+                { name: 'Rohith', pending: 3 },
+                { name: 'Meera', pending: 4 }
+            ]
+        },
+        {
+            ticketID: '004',
+            address: 'No. 1, Fourth St, T. Nagar, Chennai, Tamil Nadu 600017',
+            description: 'TV not turning on.',
+            employees: [
+                { name: 'Ganesh', pending: 2 },
+                { name: 'Rohith', pending: 7 },
+                { name: 'Meera', pending: 4 }
+            ]
+        },
+        {
+            ticketID: '005',
+            address: 'No. 23, 1st Main Rd, Anna Nagar, Chennai, Tamil Nadu 600040',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+
+            employees: [
+                { name: 'Ganesh', pending: 3 },
+                { name: 'Rohith', pending: 1 },
+                { name: 'Meera', pending: 5 }
+            ]
+        },
+        {
+            ticketID: '006',
+            address: 'No. 50, Fifth St, Besant Nagar, Chennai, Tamil Nadu 600090',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+            employees: [
+                { name: 'Ganesh', pending: 0 },
+                { name: 'Rohith', pending: 3 },
+                { name: 'Meera', pending: 8 }
+            ]
+        },
+        {
+            ticketID: '007',
+            address: 'No. 12, Second St, Nungambakkam, Chennai, Tamil Nadu 600034',
+                        description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+
+            employees: [
+                { name: 'Ganesh', pending: 5 },
+                { name: 'Rohith', pending: 6 },
+                { name: 'Meera', pending: 4 }
+            ]
+        },
+        {
+            ticketID: '008',
+            address: 'No. 11, Third St, Kotturpuram, Chennai, Tamil Nadu 600085',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+
+            employees: [
+                { name: 'Ganesh', pending: 7 },
+                { name: 'Rohith', pending: 2 },
+                { name: 'Meera', pending: 5 }
+            ]
+        },
+        {
+            ticketID: '009',
+            address: 'No. 18, Fourth St, Saidapet, Chennai, Tamil Nadu 600015',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+
+            employees: [
+                { name: 'Ganesh', pending: 3 },
+                { name: 'Rohith', pending: 2 },
+                { name: 'Meera', pending: 4 }
+            ]
+        },
+        {
+            ticketID: '010',
+            address: 'No. 7, Fifth St, Adyar, Chennai, Tamil Nadu 600020',
             description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
 
             employees: [
                 { name: 'Ganesh', pending: 4 },
-                { name: 'Rohith', pending: 5 },
-                { name: 'Meera', pending: 1 }
+                { name: 'Rohith', pending: 1 },
+                { name: 'Meera', pending: 6 }
             ]
         }
     ];

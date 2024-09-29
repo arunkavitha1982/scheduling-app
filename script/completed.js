@@ -44,7 +44,7 @@ $(document).ready(function () {
                                     <button class="btn btn-assign" ${rowData.employees.every(e => e.pending > 5) ? 'disabled' : ''}>
                                         ReAssign
                                     </button>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,8 @@ $(document).ready(function () {
         {
             ticketID: '001',
             address: 'KING SQUARE OLD NO.1 NEW NO.2, PLOT B 31, 6th Ave, Ashok Nagar, Chennai, Tamil Nadu 600083',
-            description: 'AC issue with cooling.',
+            description: 'The air conditioner is running but not cooling the room effectively, blowing warm air despite long cooling cycles. This could be due to low refrigerant levels, a dirty air filter, a malfunctioning compressor, or a faulty thermostat. To address this issue, check and replace the air filter, and have a professional inspect.',
+
             employees: [
                 { name: 'Ganesh', pending: 3 },
                 { name: 'Rohith', pending: 6 }, // More than 5, should be disabled
